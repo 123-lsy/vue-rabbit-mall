@@ -1,23 +1,26 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+// 在jsconfig.json 里的@/ 只是起到提示作用，而真实的路径转换在vite中，两个相互配合 
+import HelloWorld from '@/components/HelloWorld.vue'
+import {ref,watch} from 'vue'
+
+const count = ref(0)
+const obj = ref({count: 0})
+watch(count,(newValue, oldValue) => {
+  console.log(`我从${oldValue}变成了${newValue}`)
+})
+watch(()=> obj.value.count,
+(value) => {
+  console.log("我变啦");
+  
+})
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <button @click="count++"> {{ count }}</button>
+  <button @click="obj.count++"> {{ obj.count }}</button>
+  <el-button type="primary">Primary</el-button>
 </template>
 
 <style scoped>
