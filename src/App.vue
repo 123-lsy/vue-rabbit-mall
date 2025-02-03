@@ -1,8 +1,7 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
 // 在jsconfig.json 里的@/ 只是起到提示作用，而真实的路径转换在vite中，两个相互配合 
-import HelloWorld from '@/components/HelloWorld.vue'
 import {ref,watch} from 'vue'
+
 
 const count = ref(0)
 const obj = ref({count: 0})
@@ -21,6 +20,7 @@ watch(()=> obj.value.count,
   <button @click="count++"> {{ count }}</button>
   <button @click="obj.count++"> {{ obj.count }}</button>
   <el-button type="primary">Primary</el-button>
+  <RouterView/>
 </template>
 
 <style scoped>
