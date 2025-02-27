@@ -1,4 +1,8 @@
 <template>
-    <div>我是首页</div>
-    <RouterView/>
+    <!-- <LayoutHeader></LayoutHeader> -->
+    <LayoutNav></LayoutNav>
 </template>
+<script setup>
+import LayoutHeader from '@/views/layouts/components/LayoutHeader.vue'
+import LayoutNav from '@/views/layouts/components/LayoutNav.vue'
+</script>

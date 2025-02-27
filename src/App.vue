@@ -1,29 +1,16 @@
 <script setup>
 // 在jsconfig.json 里的@/ 只是起到提示作用，而真实的路径转换在vite中，两个相互配合 
-import {ref,watch} from 'vue'
-
-
-const count = ref(0)
-const obj = ref({count: 0})
-watch(count,(newValue, oldValue) => {
-  console.log(`我从${oldValue}变成了${newValue}`)
-})
-watch(()=> obj.value.count,
-(value) => {
-  console.log("我变啦");
-  
-})
 
 </script>
 
 <template>
-  <button @click="count++"> {{ count }}</button>
-  <button @click="obj.count++"> {{ obj.count }}</button>
-  <el-button type="primary">Primary</el-button>
   <RouterView/>
+
+  <el-button type="primary">Primary</el-button>
+
 </template>
 
-<style scoped>
+<style scoped lang ='scss'>
 header {
   line-height: 1.5;
   max-height: 100vh;
