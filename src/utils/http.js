@@ -16,13 +16,5 @@ httpInstance.interceptors.request.use(config => {
     return Promise.reject(e)
     
   })
-  const resp = await axios.get('/api/a1',{
-	headers:{
-		Authorization: 'anc'
-	},
-    params:{
-        name: '123'
-    }
-})
 
 export default httpInstance

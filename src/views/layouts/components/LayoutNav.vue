@@ -31,6 +31,8 @@
 <style scoped lang="scss">
 .app-topnav {
   background: #333;
+  
+  
 
   ul {
     display: flex;
@@ -61,9 +63,8 @@
         }
       }
     }
-    /* 当鼠标悬停时把链接颜色更改为 #111（黑色） */
     li a:hover {
-      background-color: #111;
+      color: $xtxColor;
     }
   }
 }
