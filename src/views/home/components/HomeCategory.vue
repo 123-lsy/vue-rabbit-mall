@@ -36,9 +36,10 @@ const categoryStore = useCategoryStore();
 .home_category {
   width: 250px;
   height: 500px;
-  background-color: #333;
+  background: rgba(0, 0, 0, 0.8);
   position: relative;
   margin-bottom: 10px;
+  z-index: 99;
   .menu {
     li {
       padding-left: 40px;
@@ -66,7 +67,7 @@ const categoryStore = useCategoryStore();
       left: 250px;
       top: 0;
       padding: 0 15px;
-      background-color: #fff;
+      background: rgba(255, 255, 255, 0.8);
       display: none;
       h4 {
         font-size: 20px;
@@ -87,6 +88,7 @@ const categoryStore = useCategoryStore();
           width: 310px;
             height: 120px;
             border: 1px solid #efefef;
+            background: rgba(255, 255, 255);
             margin: 10px 15px 15px 0;
             border-radius: 4px;
           &:nth-child(3n){
