@@ -24,6 +24,7 @@ defineProps({
 
 <style scoped lang="scss">
 .container {
+    background-color: #fff;
     h3{
         font-size: 32px;
         font-weight: normal;

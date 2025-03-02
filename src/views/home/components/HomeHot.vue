@@ -32,6 +32,7 @@ onMounted(() => getHotList())
   justify-content: space-between;
   height: 426px;
 
+
   li {
     width: 306px;
     height: 406px;

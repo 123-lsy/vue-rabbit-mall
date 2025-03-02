@@ -31,6 +31,7 @@ onMounted(() => getHomeNew())
 ul {
   display: flex;
   justify-content: space-between;
+  background-color: #fff;
 
   li {
     width: 306px;
