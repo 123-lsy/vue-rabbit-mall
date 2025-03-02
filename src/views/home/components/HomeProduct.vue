@@ -17,7 +17,7 @@ onMounted(() => getGoods());
     <HomePanel title="居家" v-for="item in goodsProduct" :key="item.id">
       <div class="second_category">
         <RouterLink class="categoty_image">
-          <img :src="item.picture" alt="" />
+          <img v-img-lazy="item.picture"  alt="" />
           <strong class="label">
             <span>{{ item.name }}馆</span>
             <span>{{ item.saleInfo }}</span>

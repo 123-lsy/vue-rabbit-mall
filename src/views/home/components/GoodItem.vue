@@ -1,13 +1,14 @@
 
 <script setup>
 defineProps({
-    good: Object
+    good: Object,
+    default: () => { }
 })
 </script>
 
 <template>
  <RouterLink >
-            <img :src="good.picture" alt="" />
+            <img v-img-lazy = "good.picture" alt="" />
             <p class="name">{{ good.name }}</p>
             <p class="desc">{{ good.desc }}</p>
             <p class="price">¥{{ good.price }}</p>
