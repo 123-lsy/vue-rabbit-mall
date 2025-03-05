@@ -22,11 +22,11 @@ onMounted(() => getGoods());
         <el-breadcrumb separator=">">
           <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
           <el-breadcrumb-item
-            :to="{ path: '`/categoty./${goods.categories[1].id}`' }"
+            :to="{ path: `/categoty/${goods.categories[1].id}` }"
             >{{ goods.categories[1].name }}
           </el-breadcrumb-item>
           <el-breadcrumb-item
-            :to="{ path: '`/categoty./${goods.categories[0].id}`' }"
+            :to="{ path: `/categoty/${goods.categories[0].id}` }"
             >{{ goods.categories[0].name }}
           </el-breadcrumb-item>
           <el-breadcrumb-item>{{ goods.desc }}</el-breadcrumb-item>
